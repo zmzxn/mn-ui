@@ -1,0 +1,35 @@
+{
+  "name": "mn-ui",
+  "private": true,
+  "version": "0.1.0",
+  "keywords": [
+    "mn",
+    "mn-ui"
+  ],
+  "scripts": {
+    "dev": "vite --force --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/mn-ui.umd.js",
+  "module": "lib/mn-ui.es.js",
+  "exports": {
+    "./lib/style.css": "./lib/style.css",
+    ".": {
+      "import": "./lib/mn-ui.es.js",
+      "require": "./lib/mn-ui.umd.js"
+    }
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.66.1",
+    "unplugin-vue-define-options": "^1.3.18",
+    "vite": "^4.4.5"
+  }
+}
